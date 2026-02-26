@@ -6,18 +6,28 @@ In this page, we include the Matlab code and results on a synthetic panning and 
 The results in the paper use the following configuration flags:
 
 myFlags = incAMFastPCPinputPars('TI_search');
+
 myFlags.showFlag = 1;
+
 myFlags.shrinkRule='l1proj';
+
 myFlags.shrinkAlpha=0.75;
-% ghost supression parameters
+
 myFlags.ghost = 1;
+
 myFlags.ghostUniModOff = 0.1;
+
 myFlags.ghostFrames = 20;
+
 myFlags.ghostFactor = 0;
-% PTI parameters
+
 myFlags.TI = 2; 
+
 myFlags.TIextraOneLoopSolve = 1;
+
 myFlags.folder_results = %folder to which to save the results
+
 folder = % input folder
+
 incrementalPCP_ball(folder,1, 3, 30, myFlags);
 
